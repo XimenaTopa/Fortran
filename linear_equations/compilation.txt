@@ -1,0 +1,13 @@
+[root@cdf5982fbf33 linear_equations]# vim first_program.f08
+[root@cdf5982fbf33 linear_equations]# gfortran -o first_program first_program.f08
+[root@cdf5982fbf33 linear_equations]# ls
+TC.f08  a.out  first_program  first_program.f08  screensession.text
+[root@cdf5982fbf33 linear_equations]# ./first_program
+ x =   -1.00000000     , y =   -3.00000000
+ x =    0.00000000     , y =   -1.00000000
+ x =    1.00000000     , y =    1.00000000
+ x =    2.00000000     , y =    3.00000000
+ x =    3.00000000     , y =    5.00000000
+ x =    4.00000000     , y =    7.00000000
+ x =    5.00000000     , y =    9.00000000
+
