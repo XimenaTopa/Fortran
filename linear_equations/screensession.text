@@ -1,0 +1,131 @@
+Last login: Tue Feb 11 20:27:29 on ttys009
+dantopa@Xiuhcoatl ~ % gogithu
+zsh: command not found: gogithu
+dantopa@Xiuhcoatl ~ % cd /home/  
+dantopa@Xiuhcoatl /home % docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+cern/slc6-base      latest              122976693c5b        23 hours ago        131GB
+<none>              <none>              c16a2ab9c08d        45 hours ago        131GB
+fedora              latest              28cf93046791        45 hours ago        59.7GB
+debian              latest              de22130f4166        4 days ago          33.7GB
+ubuntu              latest              7a8f5fe26fba        5 days ago          35.3GB
+cern/cc7-base       latest              184eec6627da        6 days ago          40.9GB
+debian              <none>              a8797652cfd9        10 days ago         114MB
+ubuntu              devel               2a4d239ad3cc        3 weeks ago         73.4MB
+fedora              <none>              f0858ad3febd        3 months ago        194MB
+cern/cc7-base       <none>              41306277f6e5        4 months ago        242MB
+cern/slc6-base      <none>              63453d0a9b55        8 months ago        222MB
+dantopa@Xiuhcoatl /home % docker run fedora:latest
+dantopa@Xiuhcoatl /home % docker run -it fedora:latest
+3[root@cdf5982fbf33 /]# cd /home/dantopa/
+[root@cdf5982fbf33 dantopa]# cd repos/github/
+[root@cdf5982fbf33 github]# mkdir ximena
+[root@cdf5982fbf33 github]# cd ximena/
+[root@cdf5982fbf33 ximena]# git clone https://github.com/XimenaTopa/Fortran.git
+Cloning into 'Fortran'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+[root@cdf5982fbf33 ximena]# ls
+Fortran
+[root@cdf5982fbf33 ximena]# vim .gitignore
+[root@cdf5982fbf33 ximena]# cd Fortran/
+[root@cdf5982fbf33 Fortran]# ls
+[root@cdf5982fbf33 Fortran]# ls -alh
+total 16K
+drwxr-xr-x 3 root root 4.0K Feb 12 03:31 .
+drwxr-xr-x 3 root root 4.0K Feb 12 03:31 ..
+drwxr-xr-x 8 root root 4.0K Feb 12 03:31 .git
+-rw-r--r-- 1 root root  270 Feb 12 03:31 .gitignore
+[root@cdf5982fbf33 Fortran]# vim .gitignore 
+[root@cdf5982fbf33 Fortran]# git addd .
+git: 'addd' is not a git command. See 'git --help'.
+
+The most similar command is
+	add
+[root@cdf5982fbf33 Fortran]# git add .
+[root@cdf5982fbf33 Fortran]# git commit -m "test"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@cdf5982fbf33.(none)')
+[root@cdf5982fbf33 Fortran]# git config --global user.email "Veraleen267@gmail.com"
+[root@cdf5982fbf33 Fortran]# git config --global user.name "Ximena Topa"
+[root@cdf5982fbf33 Fortran]# git commit -m "test"
+[master 7d1b73d] test
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[root@cdf5982fbf33 Fortran]# git push
+Username for 'https://github.com': Ximena Topa
+Password for 'https://Ximena Topa@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/XimenaTopa/Fortran.git/'
+[root@cdf5982fbf33 Fortran]# git push
+Username for 'https://github.com': Ximena Topa
+Password for 'https://Ximena Topa@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/XimenaTopa/Fortran.git/'
+[root@cdf5982fbf33 Fortran]# git push
+Username for 'https://github.com': Ximena Topa
+Password for 'https://Ximena Topa@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/XimenaTopa/Fortran.git/'
+[root@cdf5982fbf33 Fortran]# mkdir linear_equations
+[root@cdf5982fbf33 Fortran]# cd 
+.git/             .gitignore        linear_equations/ 
+[root@cdf5982fbf33 Fortran]# cd linear_equations/
+[root@cdf5982fbf33 linear_equations]# vim TC.f08
+[root@cdf5982fbf33 linear_equations]# gfortran TC.f08 
+[root@cdf5982fbf33 linear_equations]# ls
+TC.f08  a.out
+[root@cdf5982fbf33 linear_equations]# ./a.out 
+ x =    11.0000000    
+[root@cdf5982fbf33 linear_equations]# cd ..
+[root@cdf5982fbf33 Fortran]# git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	linear_equations/
+
+nothing added to commit but untracked files present (use "git add" to track)
+[root@cdf5982fbf33 Fortran]# git add .
+[root@cdf5982fbf33 Fortran]# git commit -m "my first fortran program"
+[master a3e5f7c] my first fortran program
+ 1 file changed, 8 insertions(+)
+ create mode 100644 linear_equations/TC.f08
+[root@cdf5982fbf33 Fortran]# git push
+Username for 'https://github.com': Ximena Topa
+Password for 'https://Ximena Topa@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/XimenaTopa/Fortran.git/'
+[root@cdf5982fbf33 Fortran]# git push
+Username for 'https://github.com': Ximena Topa
+Password for 'https://Ximena Topa@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/XimenaTopa/Fortran.git/'
+[root@cdf5982fbf33 Fortran]# git push
+Username for 'https://github.com': Veraleen267@gmail.com
+Password for 'https://Veraleen267@gmail.com@github.com': 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 669 bytes | 669.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/XimenaTopa/Fortran.git
+   8989872..a3e5f7c  master -> master
+[root@cdf5982fbf33 Fortran]# 
+
